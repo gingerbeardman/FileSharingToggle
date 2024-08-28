@@ -42,7 +42,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func setupMenu() {
 		let menu = NSMenu()
 
-		menu.addItem(NSMenuItem(title: "Toggle File Sharing", action: #selector(toggleFileSharingManually), keyEquivalent: "t"))
+		menu.addItem(NSMenuItem(title: "Toggle File Sharing", action: #selector(toggleFileSharingManually), keyEquivalent: "f"))
 		menu.addItem(NSMenuItem.separator())
 		menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
@@ -55,9 +55,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		let defaultNotificationCenter = NotificationCenter.default
 		
 		[
-			(workspaceNotificationCenter, NSWorkspace.willSleepNotification, #selector(onPowerDown)),
+//			(workspaceNotificationCenter, NSWorkspace.willSleepNotification, #selector(onPowerDown)),
+//			(workspaceNotificationCenter, NSWorkspace.didWakeNotification, #selector(onPowerUp)),
 			(workspaceNotificationCenter, NSWorkspace.willPowerOffNotification, #selector(onPowerDown)),
-			(workspaceNotificationCenter, NSWorkspace.didWakeNotification, #selector(onPowerUp)),
 			(defaultNotificationCenter, NSApplication.didFinishLaunchingNotification, #selector(onPowerUp))
 		].forEach { (center, name, selector) in
 			center.addObserver(self, selector: selector, name: name, object: nil)
