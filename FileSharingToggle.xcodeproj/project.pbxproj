@@ -50,10 +50,10 @@
 		C91079A52C7F589300BD41E1 /* FileSharingToggle */ = {
 			isa = PBXGroup;
 			children = (
+				C91079B72C7F5B7300BD41E1 /* FileSharingToggleApp.swift */,
 				C91079A62C7F589300BD41E1 /* AppDelegate.swift */,
 				C91079AA2C7F589400BD41E1 /* Assets.xcassets */,
 				C91079AF2C7F589400BD41E1 /* FileSharingToggle.entitlements */,
-				C91079B72C7F5B7300BD41E1 /* FileSharingToggleApp.swift */,
 			);
 			path = FileSharingToggle;
 			sourceTree = "<group>";
@@ -261,10 +261,11 @@
 				CODE_SIGN_ENTITLEMENTS = FileSharingToggle/FileSharingToggle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 240828;
 				DEVELOPMENT_TEAM = Q3Z639YB49;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Matt Sephton";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -288,10 +289,11 @@
 				CODE_SIGN_ENTITLEMENTS = FileSharingToggle/FileSharingToggle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 240828;
 				DEVELOPMENT_TEAM = Q3Z639YB49;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Matt Sephton";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
