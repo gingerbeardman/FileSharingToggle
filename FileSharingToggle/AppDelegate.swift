@@ -64,9 +64,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	func toggleFileSharing(enable: Bool) {
 		let task = Process()
-		task.launchPath = "/bin/launchctl"
-		task.arguments = enable ? ["load", "-w", "/System/Library/LaunchDaemons/com.apple.smbd.plist"]
-								: ["unload", "-w", "/System/Library/LaunchDaemons/com.apple.smbd.plist"]
+		task.launchPath = "/bin/sh"
+		task.arguments = ["-c", enable ? "sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.smbd.plist" : "sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.smbd.plist"]
 		
 		let pipe = Pipe()
 		task.standardOutput = pipe
