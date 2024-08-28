@@ -12,4 +12,4 @@ Currently this a royal pain in the arse to run correctly. [Ideally it needs to l
 
 ## Licence
 
-MIT
+[MIT](/LICENSE)
