@@ -8,18 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		C91079A72C7F589300BD41E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91079A62C7F589300BD41E1 /* AppDelegate.swift */; };
-		C91079A92C7F589300BD41E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91079A82C7F589300BD41E1 /* ViewController.swift */; };
 		C91079AB2C7F589400BD41E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C91079AA2C7F589400BD41E1 /* Assets.xcassets */; };
-		C91079AE2C7F589400BD41E1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C91079AD2C7F589400BD41E1 /* Base */; };
+		C91079B82C7F5B7300BD41E1 /* FileSharingToggleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91079B72C7F5B7300BD41E1 /* FileSharingToggleApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C91079A32C7F589300BD41E1 /* FileSharingToggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileSharingToggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91079A62C7F589300BD41E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C91079A82C7F589300BD41E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C91079AA2C7F589400BD41E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C91079AD2C7F589400BD41E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C91079AF2C7F589400BD41E1 /* FileSharingToggle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FileSharingToggle.entitlements; sourceTree = "<group>"; };
+		C91079B72C7F5B7300BD41E1 /* FileSharingToggleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSharingToggleApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +51,9 @@
 			isa = PBXGroup;
 			children = (
 				C91079A62C7F589300BD41E1 /* AppDelegate.swift */,
-				C91079A82C7F589300BD41E1 /* ViewController.swift */,
 				C91079AA2C7F589400BD41E1 /* Assets.xcassets */,
-				C91079AC2C7F589400BD41E1 /* Main.storyboard */,
 				C91079AF2C7F589400BD41E1 /* FileSharingToggle.entitlements */,
+				C91079B72C7F5B7300BD41E1 /* FileSharingToggleApp.swift */,
 			);
 			path = FileSharingToggle;
 			sourceTree = "<group>";
@@ -120,7 +117,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91079AB2C7F589400BD41E1 /* Assets.xcassets in Resources */,
-				C91079AE2C7F589400BD41E1 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,23 +127,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C91079A92C7F589300BD41E1 /* ViewController.swift in Sources */,
+				C91079B82C7F5B7300BD41E1 /* FileSharingToggleApp.swift in Sources */,
 				C91079A72C7F589300BD41E1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C91079AC2C7F589400BD41E1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C91079AD2C7F589400BD41E1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C91079B02C7F589400BD41E1 /* Debug */ = {
@@ -203,7 +188,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -260,7 +245,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -280,8 +265,8 @@
 				DEVELOPMENT_TEAM = Q3Z639YB49;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Matt Sephton";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,8 +292,8 @@
 				DEVELOPMENT_TEAM = Q3Z639YB49;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Matt Sephton";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
