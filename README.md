@@ -6,6 +6,8 @@ Currently this a royal pain in the arse to run correctly. [Ideally it needs to l
 
 <img width="233" alt="GWE9TiGXIAAcVHR" src="https://github.com/user-attachments/assets/dc4a8ced-cf7b-421b-97ab-1e7c78b12615">
 
+For macOS 12 and newer.
+
 ## Inspired by
 
 - [Bluesnooze](https://github.com/odlp/bluesnooze)
