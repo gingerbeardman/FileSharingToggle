@@ -1,6 +1,6 @@
 # FileSharingToggle
 
-A quick app to turn File Sharing off on restart/poweroff and on at login, or manually, to workaround a long-standing macOS bug.
+A quick app to turn File Sharing off on restart/poweroff and on at login, or manually, to workaround a [long-standing macOS bug](https://mjtsai.com/blog/2022/12/30/fixing-smb-file-sharing-in-ventura/).
 
 Currently this a royal pain in the arse to run correctly. [Ideally it needs to leverage Blessed](https://github.com/gingerbeardman/FileSharingToggle/issues/1).
 
