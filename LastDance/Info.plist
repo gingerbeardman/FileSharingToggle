@@ -24,6 +24,8 @@
 	<string>NSApplication</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>© 2024–2026 Matt Sephton</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>SMPrivilegedExecutables</key>
 	<dict>
 		<key>com.gingerbeardman.LastDanceHelper</key>
