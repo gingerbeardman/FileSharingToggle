@@ -1,6 +1,7 @@
 import Cocoa
 import Security
 import ServiceManagement
+import SwiftUI
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -10,6 +11,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	private var toggleMenuItem: NSMenuItem!
 	private var helperConnection: NSXPCConnection?
 	private var helperReady = false
+	private var welcomeWindow: NSWindow?
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		print("Application did finish launching")
@@ -21,6 +23,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 		// Ensure the app doesn't show up in the Dock
 		NSApp.setActivationPolicy(.accessory)
+
+		#if DEBUG
+		showWelcomeWindow()
+		#else
+		if !UserDefaults.standard.bool(forKey: "has_seen_welcome") {
+			showWelcomeWindow()
+		}
+		#endif
 
 		// Enable file sharing on launch
 		toggleFileSharing(enable: true)
@@ -313,5 +323,59 @@ Command output:
 		} else {
 			DispatchQueue.main.async(execute: presentAlert)
 		}
+	}
+
+	private func showWelcomeWindow() {
+		let features = [
+			WelcomeFeature(
+				icon: "folder.badge.person.crop",
+				title: "Automatic File Sharing",
+				description: "Toggles Samba file sharing on and off automatically to fix macOS connectivity issues."
+			),
+			WelcomeFeature(
+				icon: "folder.badge.gearshape",
+				title: "Lives in the Menu Bar",
+				description: "The folder icon in the menu bar shows the current sharing status."
+			),
+			WelcomeFeature(
+				icon: "lock.shield",
+				title: "One-Time Authorization",
+				description: "Authorize once and Last Dance handles sharing toggling on shutdown and restart."
+			),
+		]
+
+		let view = WelcomeView(features: features) { [weak self] in
+			self?.welcomeWindow?.close()
+		}
+
+		let window = NSWindow(
+			contentRect: .zero,
+			styleMask: [.titled, .closable, .fullSizeContentView],
+			backing: .buffered,
+			defer: false
+		)
+		window.titlebarAppearsTransparent = true
+		window.titleVisibility = .hidden
+		window.isMovableByWindowBackground = true
+		window.contentView = NSHostingView(rootView: view)
+		window.setContentSize(window.contentView!.fittingSize)
+		window.center()
+		window.isReleasedWhenClosed = false
+		window.delegate = self
+
+		NSApp.setActivationPolicy(.regular)
+		window.makeKeyAndOrderFront(nil)
+		NSApp.activate(ignoringOtherApps: true)
+
+		welcomeWindow = window
+	}
+}
+
+extension AppDelegate: NSWindowDelegate {
+	func windowWillClose(_ notification: Notification) {
+		guard (notification.object as? NSWindow) === welcomeWindow else { return }
+		UserDefaults.standard.set(true, forKey: "has_seen_welcome")
+		NSApp.setActivationPolicy(.accessory)
+		welcomeWindow = nil
 	}
 }

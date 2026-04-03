@@ -11,6 +11,7 @@
 		97E1197879F245359CADC453 /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3C3D6C7D1F42C7B680D465 /* HelperProtocol.swift */; };
 		A2C1DBBFA28B4A08915F1CDA /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3C3D6C7D1F42C7B680D465 /* HelperProtocol.swift */; };
 		C91079A72C7F589300BD41E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91079A62C7F589300BD41E1 /* AppDelegate.swift */; };
+		W50000000000000000000002 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = W50000000000000000000001 /* WelcomeView.swift */; };
 		C91079AB2C7F589400BD41E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C91079AA2C7F589400BD41E1 /* Assets.xcassets */; };
 		C91079B82C7F5B7300BD41E1 /* LastDanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91079B72C7F5B7300BD41E1 /* LastDanceApp.swift */; };
 		C91079C02C7F6A0000BD41E1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C91079BF2C7F6A0000BD41E1 /* Credits.rtf */; };
@@ -49,6 +50,7 @@
 		B6FC902D4D2A4EADBE47F90C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C91079A32C7F589300BD41E1 /* Last Dance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Last Dance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91079A62C7F589300BD41E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		W50000000000000000000001 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		C91079AA2C7F589400BD41E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C91079AF2C7F589400BD41E1 /* LastDance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LastDance.entitlements; sourceTree = "<group>"; };
 		C91079B72C7F5B7300BD41E1 /* LastDanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastDanceApp.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				C91079B72C7F5B7300BD41E1 /* LastDanceApp.swift */,
 				C91079A62C7F589300BD41E1 /* AppDelegate.swift */,
+				W50000000000000000000001 /* WelcomeView.swift */,
 				6B3C3D6C7D1F42C7B680D465 /* HelperProtocol.swift */,
 				C91079AA2C7F589400BD41E1 /* Assets.xcassets */,
 				C91079BF2C7F6A0000BD41E1 /* Credits.rtf */,
@@ -219,6 +222,7 @@
 			files = (
 				C91079B82C7F5B7300BD41E1 /* LastDanceApp.swift in Sources */,
 				C91079A72C7F589300BD41E1 /* AppDelegate.swift in Sources */,
+				W50000000000000000000002 /* WelcomeView.swift in Sources */,
 				A2C1DBBFA28B4A08915F1CDA /* HelperProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
