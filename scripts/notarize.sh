@@ -162,6 +162,11 @@ create_dmg() {
     # Remove existing DMG if present
     rm -f "$DMG_PATH"
 
+    # HFS+ (decmpfs) compress the app in place: it ships smaller and stays
+    # compressed after a Finder drag-install (transparent — signature/staple
+    # unaffected; an in-place mv on the same volume preserves the compression).
+    ditto --hfsCompression "$APP_PATH" "$APP_PATH.hfsc" && rm -rf "$APP_PATH" && mv "$APP_PATH.hfsc" "$APP_PATH"
+
     hdiutil create -volname "$APP_NAME" \
         -srcfolder "$APP_PATH" \
         -ov -format UDZO \
